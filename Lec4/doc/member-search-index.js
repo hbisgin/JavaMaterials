@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.halilbisgin","c":"FormatPractice","l":"FormatPractice()","u":"%3Cinit%3E()"},{"p":"com.halilbisgin","c":"FormatPractice","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();
