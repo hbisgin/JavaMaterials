@@ -14,6 +14,7 @@ public class ShapeTest {
 		r1.setLength(length);
 		r1.setWidth(width);
 		r1.displayArea();
+		
 		r1.displayPerimeter();
         System.out.println("area with static Calc " + Rectangle.CalcArea(length, width));
 	}
