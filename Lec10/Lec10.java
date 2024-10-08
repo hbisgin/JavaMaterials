@@ -1,4 +1,3 @@
-
 public class Lec10 {
 
 	public static void main(String[] args) {
@@ -12,3 +11,5 @@ public class Lec10 {
 	}
 
 }
+
+
