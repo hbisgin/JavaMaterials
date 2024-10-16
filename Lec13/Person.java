@@ -34,9 +34,12 @@ public class Person {
 		
 		System.out.println("******************************");
 		sArray.add(0, "Sue");
-		for(int i=0;i<sArray.size();i++)
+		if(!sArray.isEmpty()) //isEmpty: if it is false and I want to print, then I should use ! in front of it
 		{
-			System.out.println(sArray.get(i));
+			for(int i=0;i<sArray.size();i++)
+			{
+				System.out.println(sArray.get(i));
+			}
 		}
 
 	}
