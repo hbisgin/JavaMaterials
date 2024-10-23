@@ -13,6 +13,11 @@ public class Point {
 		this.y = 0;
 	}
 	
+	public Point()
+	{
+		this(0,0);
+	}
+	
 	public String toString()
 	{
 		return x + " " + y;
@@ -22,8 +27,10 @@ public class Point {
 	{
 		Point p1 = new Point(2,3);
 		Point p2 = new Point(2);
+		Point p3 = new Point();
 		System.out.println(p1);
 		System.out.println(p2);
+		System.out.println(p3);
 	}
 	
 }
