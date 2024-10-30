@@ -15,4 +15,13 @@ public class Animal {
 		System.out.println("You should not be calling me! I'm not a defined animal yet :)");
 	}
 
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void displayInfo()
+	{
+		System.out.println("my name is " + name);
+	}
 }

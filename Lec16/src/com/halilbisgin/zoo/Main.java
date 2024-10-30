@@ -9,6 +9,7 @@ public class Main {
 		
 		aObject.makeSound();
 		cObject.makeSound();
+		cObject.displayInfo();
 
 	}
 

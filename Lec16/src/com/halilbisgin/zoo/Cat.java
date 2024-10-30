@@ -15,4 +15,13 @@ public class Cat extends Animal{
 		System.out.println("Meaowwww");
 	}
 	
+	@Override
+	public void displayInfo()
+	{
+		System.out.println("My id is :" + ID);
+		super.displayInfo();
+		//System.out.println("My id is :" + ID + " my name is " + getName()); 
+		//the sdifference between name and ID is their access levels
+	}
+	
 }
