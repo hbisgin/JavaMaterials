@@ -16,10 +16,10 @@ public class Cat extends Animal{
 	}
 	
 	@Override
-	public void displayInfo()
+	public void displayInfo() //Remember the setPerimeter==> Remember the Titans
 	{
 		System.out.println("My id is :" + ID);
-		super.displayInfo();
+		super.displayInfo(); //super means you're referring to your superclass
 		//System.out.println("My id is :" + ID + " my name is " + getName()); 
 		//the sdifference between name and ID is their access levels
 	}

@@ -6,10 +6,12 @@ public class Main {
 		// TODO Auto-generated method stub
 		Animal aObject = new Animal();
 		Cat cObject = new Cat("Tabby");
+		ZooKeeper zkeeper = new ZooKeeper();
 		
 		aObject.makeSound();
 		cObject.makeSound();
 		cObject.displayInfo();
+		zkeeper.takeCare(aObject);
 
 	}
 
