@@ -5,6 +5,11 @@ public class Cash extends Payment {
 		super(amount);
 	}
 	
+	public Cash()
+	{
+		super();
+	}
+	
 	@Override
 	public void makePayment()
 	{
