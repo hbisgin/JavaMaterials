@@ -10,5 +10,15 @@ public class Rectangle extends Shape{
 		this.width = width;
 		this.length = length;
 	}
+	
+	public  void setArea(double area)
+	{
+		this.area = area;
+	}
+	
+	public void setPerimeter(double perimeter)
+	{
+		this.perimeter = perimeter;
+	}
 
 }

@@ -10,6 +10,14 @@ public class ShapeTest {
 		//This is an example of Polymorphism again!!!
 		System.out.println(shape.getArea() + " " + shape.getPerimeter());
 		
+		Shape shapeSq = new Square(4);
+		System.out.println(shapeSq.getArea() + " " + shapeSq.getPerimeter());
+		System.out.println("-----------------------");
+		shapeSq.setArea(64);
+		System.out.println(shapeSq.getArea() + " " + shapeSq.getPerimeter());
+		
+		
+		
 
 	}
 
