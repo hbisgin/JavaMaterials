@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,6 +12,7 @@ public class MyFrame { //extends JFrame
 		JFrame frame = new JFrame("My First Frame");
 		JPanel eastPanel = new JPanel();
 		JPanel westPanel = new JPanel();
+		westPanel.setLayout(new BoxLayout(westPanel, BoxLayout.Y_AXIS));
 		
 		JButton east1Button = new JButton("East Button 1");
 		JButton west1Button = new JButton("West Button 1");
