@@ -15,10 +15,18 @@ public class MyFrame { //extends JFrame
 		JButton east1Button = new JButton("East Button 1");
 		JButton west1Button = new JButton("West Button 1");
 		
+		JButton east2Button = new JButton("East Button 2");
+		JButton west2Button = new JButton("West Button 2");
+		
 		//there is no connection between panel and the frame yet!
 		
 		frame.add(eastPanel, BorderLayout.EAST);
 		frame.add(westPanel, BorderLayout.WEST);
+		
+		eastPanel.add(east1Button);
+		westPanel.add(west1Button);
+		eastPanel.add(east2Button);
+		westPanel.add(west2Button);
 		
 		frame.setSize(400, 300);
 		frame.setVisible(true);
