@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class InteractiveFrame { //extends JFrame
+public class InteractiveFrame { //extends JFrame implements ActionListener (one option)
 	JFrame frame;
 	JPanel panel1;
 	JLabel myLabel, southLabel;
@@ -28,7 +28,23 @@ public class InteractiveFrame { //extends JFrame
 		myTextField = new JTextField("Type Here");
 		panel1 = new JPanel();
 		JButton button1 = new JButton("Button 1");
+		ButtonHandler handler = new ButtonHandler();
+		button1.addActionListener(handler);
 		JButton button2 = new JButton("Button 2");
+		
+		//this is just another option to add Listeners in general
+		//it is clear that with whom I'm associating what. This is a good reminder for me to follow what I have coded.
+		//anonymous class
+		button2.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				myLabel.setText("Button 2 clicked");
+			}
+			
+		});
+		
 		myLabel = new JLabel("First Label");
 		panel1.add(myTextField);
 		panel1.add(button1);
@@ -46,5 +62,19 @@ public class InteractiveFrame { //extends JFrame
 		InteractiveFrame myFrame = new InteractiveFrame();
 
 	}
+	
+	//another option for ActionListener
+	private class ButtonHandler implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) { //you can even leave the method body empty during the implementation to avoid interface warnings
+			// TODO Auto-generated method stub
+			//System.out.println("Button 1 Clicked");
+			myLabel.setText("Button 1 Clicked");
+			
+		}
+		
+	}
+	
 
 }
