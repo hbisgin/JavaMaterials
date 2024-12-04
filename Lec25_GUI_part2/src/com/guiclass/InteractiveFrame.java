@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -28,12 +31,17 @@ public class InteractiveFrame { //extends JFrame implements ActionListener (one 
 	{
 		frame = new JFrame("My Interactive Frame");
 		myTextField = new JTextField("Type Here");
+		southLabel = new JLabel();
 		panel1 = new JPanel();
 		JPanel panel2 = new JPanel();
 		JButton button1 = new JButton("Button 1");
 		ButtonHandler handler = new ButtonHandler();
 		button1.addActionListener(handler);
 		JButton button2 = new JButton("Button 2");
+		
+		//ComBoBox
+		mycomboBox = new JComboBox(numbers);
+		mycomboBox.addItemListener(new ItemListenerHandler());
 		
 		myList = new JList<String>(names);
 		myList.setVisibleRowCount(3); //it sets the number of rows of the list visible at first.
@@ -59,6 +67,8 @@ public class InteractiveFrame { //extends JFrame implements ActionListener (one 
 		myLabel = new JLabel("First Label");
 		nameLabel = new JLabel("This is a label :)"); //initialize this instance variable here
 		panel2.add(nameLabel);
+		panel2.add(mycomboBox);
+		panel2.add(southLabel);
 		panel1.add(myTextField);
 		panel1.add(button1);
 		panel1.add(myLabel);
@@ -103,6 +113,21 @@ public class InteractiveFrame { //extends JFrame implements ActionListener (one 
 		}
 		
 	}
+	
+	private class ItemListenerHandler implements ItemListener{
+
+		@Override
+		public void itemStateChanged(ItemEvent e) {
+			// TODO Auto-generated method stub
+			if (e.getStateChange()==ItemEvent.SELECTED)
+			{
+				southLabel.setText(numbers[mycomboBox.getSelectedIndex()]);
+			}
+			
+		}
+		
+	}
+
 	
 
 }
