@@ -32,8 +32,10 @@ public class InteractiveFrame { //extends JFrame
 		myLabel = new JLabel("First Label");
 		panel1.add(myTextField);
 		panel1.add(button1);
-		panel1.add(button2);
 		panel1.add(myLabel);
+		panel1.add(button2);
+		
+		panel1.setLayout(new GridLayout(2,2));
 		frame.add(panel1);
 		frame.setSize(400, 300);
 		frame.setVisible(true);
