@@ -7,7 +7,11 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class InteractiveFrame {
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class InteractiveFrame { //extends JFrame
 	JFrame frame;
 	JPanel panel1;
 	JLabel myLabel, southLabel;
@@ -21,6 +25,16 @@ public class InteractiveFrame {
 	InteractiveFrame()
 	{
 		frame = new JFrame("My Interactive Frame");
+		myTextField = new JTextField("Type Here");
+		panel1 = new JPanel();
+		JButton button1 = new JButton("Button 1");
+		JButton button2 = new JButton("Button 2");
+		myLabel = new JLabel("First Label");
+		panel1.add(myTextField);
+		panel1.add(button1);
+		panel1.add(button2);
+		panel1.add(myLabel);
+		frame.add(panel1);
 		frame.setSize(400, 300);
 		frame.setVisible(true);
 	}
